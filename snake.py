@@ -66,3 +66,8 @@ class Snake:
         new_segment.goto(self.__get_tail())
         new_segment.speed("fastest")
         self.segments.append(new_segment)
+
+    def reset(self):
+        for seg in self.segments:
+            seg.reset()
+        self.__init__()
